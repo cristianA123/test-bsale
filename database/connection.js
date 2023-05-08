@@ -1,21 +1,11 @@
+const config = require("./db.config");
 
 const { Sequelize } = require('sequelize');
-const { QueryTypes } = require('sequelize');
 
 
-const db = new Sequelize('airline', 'bsale_test', 'bsale_test',{
-    host: 'mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com',
+const db = new Sequelize(config.NAME_DB, config.USER_DB, config.PASSWORD_DB,{
+    host: config.HOST_DB,
     dialect: 'mysql',
 })
-
-async function prueba() {
-    const suma = await db.query('SELECT 1+2 AS result LIMIT 1', {
-      type: QueryTypes.SELECT,
-    });
-    console.log(suma);
-}
-prueba()
-
-
 
 module.exports = db
