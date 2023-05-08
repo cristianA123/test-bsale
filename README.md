@@ -15,4 +15,4 @@
 ```  http://127.0.0.1:4000/flights/1/passengers ```
 
 ### EndPoint en produccion
-```  http://127.0.0.1:4000/flights/1/passengers ```
+``` https://test-bsale-production.up.railway.app/flights/1/passengers ```
